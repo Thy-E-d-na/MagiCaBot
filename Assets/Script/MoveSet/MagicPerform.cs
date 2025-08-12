@@ -1,15 +1,14 @@
 using UnityEngine;
 
-public class FireBurn : MonoBehaviour
+public class MagicPerform : MonoBehaviour
 {
-    //grenade
-    [SerializeField] private GameObject _burnPrefab;
+    [SerializeField] private GameObject _performPrefab;
     [SerializeField] private float _burnR;
     [SerializeField] private float _explosionForce;
 
     private void OnCollisionEnter(Collision collision)
     {
-        Instantiate(_burnPrefab, transform.position, transform.rotation);
+        Instantiate(_performPrefab, transform.position, transform.rotation);
         PushNearbyObjects();
         Destroy(gameObject);
     }

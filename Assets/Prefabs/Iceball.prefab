@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 1198461352352193569}
   - component: {fileID: 7501553385101083862}
   - component: {fileID: 9082056445787841882}
-  - component: {fileID: -3411894098964178043}
   - component: {fileID: 3929772305748337084}
+  - component: {fileID: -3318047944675889201}
   m_Layer: 0
   m_Name: Iceball
   m_TagString: Untagged
@@ -138,21 +138,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &-3411894098964178043
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6520101522880888104}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0184b138019b5449af53c2dcd8019dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _burnPrefab: {fileID: 5112403345868107898, guid: 6f34ef0d986e9db4199cf75805f79753, type: 3}
-  _burnR: 3
-  _explosionForce: 5
 --- !u!114 &3929772305748337084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,3 +151,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _cubeFragmentPrefab: {fileID: 7177991128484655659, guid: 59a35ab9f68edff40b6e5332bed330f5, type: 3}
+--- !u!114 &-3318047944675889201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6520101522880888104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d51b0ff8b558e447a83883237382c5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _performPrefab: {fileID: 5112403345868107898, guid: 6f34ef0d986e9db4199cf75805f79753, type: 3}
+  _burnR: 3
+  _explosionForce: 5
