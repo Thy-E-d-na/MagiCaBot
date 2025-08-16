@@ -803,9 +803,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2132550522083247344}
-  - component: {fileID: 3306251357463769893}
   - component: {fileID: 8951928300233479983}
-  - component: {fileID: 3071724806016759237}
   m_Layer: 0
   m_Name: Skill
   m_TagString: Untagged
@@ -830,21 +828,6 @@ Transform:
   - {fileID: 7850800627550577572}
   m_Father: {fileID: 5722493241824743447}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3306251357463769893
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7254439929652232185}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0961a881c08540548b335ccf887b4aad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _fireBallPrefab: {fileID: 9082056445787841882, guid: 6f108e74b86279e40883ce4c9f6d2412, type: 3}
-  _firingPos: {fileID: 1297509371001987001}
-  _approachSpeed: 15
 --- !u!114 &8951928300233479983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -860,21 +843,6 @@ MonoBehaviour:
   _aimingPos: {fileID: 5257271152410627690}
   _charge: {fileID: 1297509371001987001}
   _effectPref: {fileID: 4638712882946042690, guid: d566fb633416de648a462fa497903371, type: 3}
---- !u!114 &3071724806016759237
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7254439929652232185}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 640cf466015a2844c8dce952f617eedd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _skillPrefab: {fileID: 0}
-  _castPos: {fileID: 1297509371001987001}
-  _approachSpeed: 10
 --- !u!1 &7561072449387872661
 GameObject:
   m_ObjectHideFlags: 0
@@ -1065,7 +1033,6 @@ GameObject:
   - component: {fileID: 4953854342081172965}
   - component: {fileID: 6961557108670344523}
   - component: {fileID: 5251204488210090796}
-  - component: {fileID: 8175942280438885695}
   m_Layer: 3
   m_Name: CatBot
   m_TagString: Player
@@ -1239,22 +1206,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 363a6384292be1f45953be332962314c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _fire: {fileID: 1120369429361536294, guid: 052faaac586de48259a63d0c4782560b, type: 3}
-  OnFire:
+  _shot: {fileID: 0}
+  OnShot:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3306251357463769893}
-        m_TargetAssemblyTypeName: PyroCast, Assembly-CSharp
-        m_MethodName: Casting
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &5251204488210090796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1283,24 +1238,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &8175942280438885695
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8338157624840550592}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c00e3f81b18202342bf527d2805ada64, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _charge: {fileID: 5574833883161500296, guid: 052faaac586de48259a63d0c4782560b, type: 3}
-  _skillVfx: {fileID: 0}
-  _skillChargeSlider: {fileID: 0}
-  OnCast:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &8610874193026818643
 GameObject:
   m_ObjectHideFlags: 0
