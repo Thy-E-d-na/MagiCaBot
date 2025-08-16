@@ -10,8 +10,6 @@ public class HoldSkill : MonoBehaviour
     [SerializeField] private GameObject _skillVfx;
     [SerializeField] private Transform chargePos;
     GameObject mag;
-
-    [SerializeField] private InputActionReference _emitLighting;
     public UnityEvent OnEmit;
     public void EmitLight() => OnEmit.Invoke();
 
@@ -34,23 +32,15 @@ public class HoldSkill : MonoBehaviour
     {
         isCharging = true;
         mag = Instantiate(_skillVfx, chargePos);
-       
+        
+
     }
     void EndCharge(InputAction.CallbackContext context)
     {
         isCharging = false;
+        EmitLight();
         Destroy(mag.gameObject);
        
-    }
-    private void Update()
-    {
-        if (isCharging)
-        {
-            float t = Time.time;
-            
-            EmitLight();
-        }
-
     }
 
 }

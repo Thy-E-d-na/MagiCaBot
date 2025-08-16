@@ -803,7 +803,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2132550522083247344}
-  - component: {fileID: 8951928300233479983}
   m_Layer: 0
   m_Name: Skill
   m_TagString: Untagged
@@ -819,29 +818,62 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7254439929652232185}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 20.748728, y: 73.63134, z: -12.359899}
-  m_LocalScale: {x: 0.90909094, y: 2.1052632, z: 0.9090912}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3233875794780298146}
   - {fileID: 7850800627550577572}
+  - {fileID: 2245047796925529374}
   m_Father: {fileID: 5722493241824743447}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8951928300233479983
+--- !u!1 &7286390904577460944
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2245047796925529374}
+  - component: {fileID: 7693444770495685497}
+  m_Layer: 0
+  m_Name: holdSkill
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2245047796925529374
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7286390904577460944}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2132550522083247344}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7693444770495685497
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7254439929652232185}
+  m_GameObject: {fileID: 7286390904577460944}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e8d34aa279a48274ba5b838cf69da1b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _aimingPos: {fileID: 5257271152410627690}
-  _charge: {fileID: 1297509371001987001}
+  _chargePos: {fileID: 1297509371001987001}
   _effectPref: {fileID: 4638712882946042690, guid: d566fb633416de648a462fa497903371, type: 3}
 --- !u!1 &7561072449387872661
 GameObject:
@@ -994,8 +1026,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3233875794780298146}
+  - component: {fileID: 2509820029556915140}
   m_Layer: 0
-  m_Name: L
+  m_Name: ice_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1016,6 +1049,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2132550522083247344}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2509820029556915140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7906681032045010365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feb8f9ca310e65749a7e3e924eb6e872, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _elementPrefab: {fileID: 9082056445787841882, guid: 518488a97a6096c4894d6be1d1cee8d5, type: 3}
+  _firingPos: {fileID: 1297509371001987001}
+  _approachSpeed: 20
 --- !u!1 &8338157624840550592
 GameObject:
   m_ObjectHideFlags: 0
@@ -1033,6 +1081,7 @@ GameObject:
   - component: {fileID: 4953854342081172965}
   - component: {fileID: 6961557108670344523}
   - component: {fileID: 5251204488210090796}
+  - component: {fileID: 5216568320293726291}
   m_Layer: 3
   m_Name: CatBot
   m_TagString: Player
@@ -1206,10 +1255,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 363a6384292be1f45953be332962314c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _shot: {fileID: 0}
+  _shot: {fileID: 1120369429361536294, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   OnShot:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2509820029556915140}
+        m_TargetAssemblyTypeName: Projectile, Assembly-CSharp
+        m_MethodName: Casting
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &5251204488210090796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1226,7 +1287,37 @@ MonoBehaviour:
   OnEmit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8951928300233479983}
+      - m_Target: {fileID: 46384027102171441}
+        m_TargetAssemblyTypeName: Projectile, Assembly-CSharp
+        m_MethodName: Casting
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &5216568320293726291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8338157624840550592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c76878adf75d4164cb913c3e37a47d8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _charge: {fileID: 5574833883161500296, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  _skillVfx: {fileID: 5824670795371433373, guid: f6fd568b816c64943a44efc3add3a881, type: 3}
+  chargePos: {fileID: 1297509371001987001}
+  OnEmit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7693444770495685497}
         m_TargetAssemblyTypeName: RayCastHit, Assembly-CSharp
         m_MethodName: Shocking
         m_Mode: 1
@@ -1238,6 +1329,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  isCharging: 0
+  chargingtime: 4
 --- !u!1 &8610874193026818643
 GameObject:
   m_ObjectHideFlags: 0
@@ -1247,8 +1340,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7850800627550577572}
+  - component: {fileID: 46384027102171441}
   m_Layer: 0
-  m_Name: R
+  m_Name: fire_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1269,6 +1363,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2132550522083247344}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &46384027102171441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8610874193026818643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feb8f9ca310e65749a7e3e924eb6e872, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _elementPrefab: {fileID: 9082056445787841882, guid: 6f108e74b86279e40883ce4c9f6d2412, type: 3}
+  _firingPos: {fileID: 1297509371001987001}
+  _approachSpeed: 15
 --- !u!1 &9016311794313254119
 GameObject:
   m_ObjectHideFlags: 0
