@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 118610412273149787}
   - component: {fileID: 1164689973259677625}
   - component: {fileID: 1676842063325731384}
+  - component: {fileID: 2463348945689836656}
+  - component: {fileID: 9196310486312757081}
   m_Layer: 0
   m_Name: Chest
   m_TagString: Chest
@@ -134,3 +136,33 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.0931206, y: 2, z: 2}
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &2463348945689836656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5386360885354237217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1aac6af370a2d3447b5e2f5dfc1617fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxHealthPoint: 50
+  OnDead:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &9196310486312757081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5386360885354237217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d54409c6c5a98ce4daa61e1704893ab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _box: {fileID: 0}
+  _destroyEffect: {fileID: 0}
