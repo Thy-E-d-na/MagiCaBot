@@ -874,7 +874,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _aimingPos: {fileID: 5257271152410627690}
   _chargePos: {fileID: 1297509371001987001}
-  _effectPref: {fileID: 4638712882946042690, guid: d566fb633416de648a462fa497903371, type: 3}
+  _effectPref: {fileID: 9054956286364614332, guid: facd17be662fdb24e8b03073f9da7cd1, type: 3}
+  _damage: 0
 --- !u!1 &7561072449387872661
 GameObject:
   m_ObjectHideFlags: 0
@@ -1312,7 +1313,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _charge: {fileID: 5574833883161500296, guid: 052faaac586de48259a63d0c4782560b, type: 3}
-  _skillVfx: {fileID: 5824670795371433373, guid: f6fd568b816c64943a44efc3add3a881, type: 3}
+  _skillVfx: {fileID: 4638712882946042690, guid: d566fb633416de648a462fa497903371, type: 3}
   chargePos: {fileID: 1297509371001987001}
   OnEmit:
     m_PersistentCalls:
