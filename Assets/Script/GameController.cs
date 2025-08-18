@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
-    [SerializeField] private GameObject _endPnnl;
-    [SerializeField] private GameObject _crosshair;
+    [SerializeField] private GameObject _winPnl;
+    [SerializeField] private GameObject _losePnl;
+    [SerializeField] private GameObject _cheeseHp;
    
     int ratCount;
     public static GameController gameinstance;
+    private void Start()
+    {
+        Instantiate(_cheeseHp);
+    }
 
     private void Awake()
     {
@@ -25,20 +30,18 @@ public class GameController : MonoBehaviour
     }
     private void Update()
     {
-        if (ratCount == 6)
+        if (ratCount == 0)
         {
-            gameEnd();
+            gameWin();
+        }
+        else if (ratCount > 0)
+        {
+            gameLose();
         }
     }
 
-    public void gameEnd()
-    {
-
-        _endPnnl.SetActive(true);
-
-        _crosshair.SetActive(false);
-    }
-       
+    public void gameWin() => _winPnl.SetActive(true);
+    public void gameLose() => _losePnl.SetActive(true);
     public void AddDrone()
     {
         ratCount++;
@@ -50,7 +53,5 @@ public class GameController : MonoBehaviour
     public void resetGame()
     {
         ratCount = 0;
-        _endPnnl.SetActive(false);
-        _crosshair.SetActive(true);
     }
 }
