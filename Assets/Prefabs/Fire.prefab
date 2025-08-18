@@ -45,7 +45,7 @@ Light:
   m_Type: 2
   m_Color: {r: 0.99607843, g: 0.6039216, b: 0.3764706, a: 1}
   m_Intensity: 0
-  m_Range: 8.4218855
+  m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -9644,7 +9644,7 @@ GameObject:
   - component: {fileID: 6294508013172393187}
   - component: {fileID: 3770819115314925417}
   m_Layer: 0
-  m_Name: CFXR Fire
+  m_Name: Fire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

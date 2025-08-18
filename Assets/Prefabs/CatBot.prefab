@@ -661,7 +661,7 @@ Transform:
   m_GameObject: {fileID: 6885884234392115932}
   serializedVersion: 2
   m_LocalRotation: {x: 0.17364816, y: 0, z: 0, w: 0.9848078}
-  m_LocalPosition: {x: 0, y: 6, z: -2.5}
+  m_LocalPosition: {x: 0, y: 3, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -875,7 +875,8 @@ MonoBehaviour:
   _aimingPos: {fileID: 5257271152410627690}
   _chargePos: {fileID: 1297509371001987001}
   _effectPref: {fileID: 9054956286364614332, guid: facd17be662fdb24e8b03073f9da7cd1, type: 3}
-  _damage: 0
+  _damage: 80
+  _radius: 4
 --- !u!1 &7561072449387872661
 GameObject:
   m_ObjectHideFlags: 0
@@ -1064,7 +1065,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _elementPrefab: {fileID: 9082056445787841882, guid: 518488a97a6096c4894d6be1d1cee8d5, type: 3}
   _firingPos: {fileID: 1297509371001987001}
-  _approachSpeed: 20
+  _approachSpeed: 10
 --- !u!1 &8338157624840550592
 GameObject:
   m_ObjectHideFlags: 0
@@ -1378,7 +1379,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _elementPrefab: {fileID: 9082056445787841882, guid: 6f108e74b86279e40883ce4c9f6d2412, type: 3}
   _firingPos: {fileID: 1297509371001987001}
-  _approachSpeed: 15
+  _approachSpeed: 5
 --- !u!1 &9016311794313254119
 GameObject:
   m_ObjectHideFlags: 0

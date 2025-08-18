@@ -1,4 +1,5 @@
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class RayCastHit : MonoBehaviour
 {
@@ -8,17 +9,24 @@ public class RayCastHit : MonoBehaviour
     //noi cast phep tao skill
     [SerializeField] private GameObject _effectPref;
     [SerializeField] private int _damage;
+    [SerializeField] private float _radius;
+   
     public void Shocking()
     {
         Ray ray = new(_aimingPos.position, _chargePos.position - _aimingPos.position);
         if (Physics.Raycast(ray, out var rayCasthit))
         {
             Instantiate(_effectPref, rayCasthit.point, Quaternion.LookRotation(rayCasthit.normal));
-            if (rayCasthit.collider.TryGetComponent<Health>(out var health))
+            var targets = Physics.OverlapSphere(rayCasthit.point, _radius);
+            foreach (var target in targets)
             {
-                health.TakeDamage(_damage);
+                if ((target.CompareTag("Target") || target.CompareTag("Chest")) && target.TryGetComponent<Health>(out var hp))
+                {
+                    hp.TakeDamage(_damage);
+                }
+
             }
-        }
+        } 
         
     }
 }

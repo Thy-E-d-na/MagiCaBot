@@ -14,7 +14,6 @@ public class HoldSkill : MonoBehaviour
     public void EmitLight() => OnEmit.Invoke();
 
     public bool isCharging;
-    public float chargingtime;
 
     private void OnEnable()
     {
