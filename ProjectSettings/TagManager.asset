@@ -14,9 +14,9 @@ TagManager:
   - Water
   - UI
   - Rat
-  - 
-  - 
-  - 
+  - wIsGround
+  - wIsWall
+  - Cheese
   - 
   - 
   - 

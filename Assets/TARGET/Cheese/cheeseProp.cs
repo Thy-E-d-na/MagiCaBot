@@ -2,15 +2,23 @@ using UnityEngine;
 
 public class cheeseProp : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private Health cheeseHp;
+    private void Start()
     {
-        
+        cheeseHp = GetComponent<Health>();
     }
-
-    // Update is called once per frame
-    void Update()
+    private void OnCollisionEnter(Collision collision)
     {
-        
+        if (collision.gameObject.CompareTag("Target"))
+        { 
+            cheeseHp.TakeDamage(10);
+        }              
+    }
+    private void Update()
+    {
+        if(cheeseHp.HealthPoint <= 0)
+        {
+            GameController.gameinstance.gameLose();
+        }
     }
 }

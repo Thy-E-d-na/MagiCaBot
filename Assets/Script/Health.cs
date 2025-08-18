@@ -34,7 +34,11 @@ public class Health : MonoBehaviour
             Die();
         }
     }
-    private void Die() => Destroy(gameObject);
+    private void Die()
+    {
+        Destroy(gameObject);
+        GameController.gameinstance.ratDeath();
+    }
     private void UpdateHp() => _hpBar.value = _healthPoint;
     
 }

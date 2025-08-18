@@ -6,14 +6,9 @@ public class GameController : MonoBehaviour
 {
     [SerializeField] private GameObject _winPnl;
     [SerializeField] private GameObject _losePnl;
-    [SerializeField] private GameObject _cheeseHp;
    
-    int ratCount;
+    int ratCount = 10;
     public static GameController gameinstance;
-    private void Start()
-    {
-        Instantiate(_cheeseHp);
-    }
 
     private void Awake()
     {
@@ -42,16 +37,9 @@ public class GameController : MonoBehaviour
 
     public void gameWin() => _winPnl.SetActive(true);
     public void gameLose() => _losePnl.SetActive(true);
-    public void AddDrone()
-    {
-        ratCount++;
-    }
-    public void destroyDrone()
+    public void ratDeath()
     {
         ratCount--;
     }
-    public void resetGame()
-    {
-        ratCount = 0;
-    }
+
 }
