@@ -36,8 +36,16 @@ public class Health : MonoBehaviour
     }
     private void Die()
     {
-        Destroy(gameObject);
-        GameController.gameinstance.ratDeath();
+        if(CompareTag("Cheese"))
+        {
+            GameController.gameinstance.gameLose();
+        }
+        if(CompareTag("Rat"))
+        {
+            Destroy(gameObject);
+            GameController.gameinstance.ratDeath();
+        }
+        
     }
     private void UpdateHp() => _hpBar.value = _healthPoint;
     

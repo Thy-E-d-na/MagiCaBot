@@ -16,7 +16,8 @@ public class targetBehaviour : MonoBehaviour
     //states
     public float sightRange, atkRange;
     public bool cheeseInSight, cheeseIsEating;
-    private void Awake()
+
+    private void Start()
     {
         //find to regconize the cheese
         cheese = GameObject.Find("Cheese").transform;

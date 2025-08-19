@@ -2455,7 +2455,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4074175351907747948, guid: b2776b9a0570bb04983bccc28c1f249b, type: 3}
       propertyPath: m_Name
-      value: Cheese_Raw
+      value: Cheese
       objectReference: {fileID: 0}
     - target: {fileID: 5156352468778673951, guid: b2776b9a0570bb04983bccc28c1f249b, type: 3}
       propertyPath: m_AnchorMax.x

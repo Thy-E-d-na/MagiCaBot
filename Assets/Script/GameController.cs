@@ -29,10 +29,6 @@ public class GameController : MonoBehaviour
         {
             gameWin();
         }
-        else if (ratCount > 0)
-        {
-            gameLose();
-        }
     }
 
     public void gameWin() => _winPnl.SetActive(true);
