@@ -1,0 +1,46 @@
+# Blender3D MTL File: Ninja Mouse (EWJ 3D).blend
+# Material Count: 4
+newmtl Material.035_Head.png_Head.png
+Ns 0.000000
+Ka 0.000000 0.000000 0.000000
+Kd 0.365000 0.365000 0.365000
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Head.png
+
+
+newmtl Material.037_Body.png_Body.png
+Ns 0.000000
+Ka 0.000000 0.000000 0.000000
+Kd 0.365000 0.365000 0.365000
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Body.png
+
+
+newmtl Material.038_Body.png_Body.png
+Ns 0.000000
+Ka 0.000000 0.000000 0.000000
+Kd 0.365000 0.365000 0.365000
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Body.png
+
+
+newmtl Material.036_Ears.png_Ears.png
+Ns 0.000000
+Ka 0.000000 0.000000 0.000000
+Kd 0.365000 0.365000 0.365000
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Ears.png
+
+
