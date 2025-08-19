@@ -22,6 +22,7 @@ public class targetBehaviour : MonoBehaviour
         //find to regconize the cheese
         cheese = GameObject.Find("Cheese").transform;
         agent = GetComponent<NavMeshAgent>();
+     
     }
     private void Update()
     {
@@ -32,7 +33,7 @@ public class targetBehaviour : MonoBehaviour
     }
     private void Patroling()
     {
-        if (walkPointSet) SearchWalkPoint();
+        if (!walkPointSet) SearchWalkPoint();
         if(walkPointSet) agent.SetDestination(walkPoint);
         Vector3 distanceToWalkPoint = transform.position - walkPoint;
         //walkpoint reached

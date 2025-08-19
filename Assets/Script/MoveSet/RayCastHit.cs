@@ -10,10 +10,12 @@ public class RayCastHit : MonoBehaviour
     [SerializeField] private GameObject _effectPref;
     [SerializeField] private int _damage;
     [SerializeField] private float _radius;
+    [SerializeField] private Transform crosshair;
    
     public void Shocking()
     {
-        Ray ray = new(_aimingPos.position, _chargePos.position - _aimingPos.position);
+        crosshair.gameObject.SetActive(true);
+        Ray ray = new(_aimingPos.position, crosshair.position - _aimingPos.position);
         if (Physics.Raycast(ray, out var rayCasthit))
         {
             Instantiate(_effectPref, rayCasthit.point, Quaternion.LookRotation(rayCasthit.normal));
@@ -26,6 +28,7 @@ public class RayCastHit : MonoBehaviour
                 }
 
             }
+            crosshair.gameObject.SetActive(false);
         } 
         
     }
