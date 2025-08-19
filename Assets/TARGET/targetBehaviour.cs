@@ -22,10 +22,12 @@ public class targetBehaviour : MonoBehaviour
         //find to regconize the cheese
         cheese = GameObject.Find("Cheese").transform;
         agent = GetComponent<NavMeshAgent>();
-     
+        if (!cheeseInSight && !cheeseIsEating) Patroling();
+
     }
     private void Update()
     {
+        Debug.Log("run");
         cheeseInSight = Physics.CheckSphere(transform.position, sightRange,wIsCheese);
         cheeseIsEating = Physics.CheckSphere(transform.position, atkRange, wIsCheese);
         if (!cheeseInSight && !cheeseIsEating) Patroling();

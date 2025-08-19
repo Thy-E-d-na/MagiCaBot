@@ -55,7 +55,7 @@ public class HoldSkill : MonoBehaviour
         Ray ray = new(_aimingPos.position, crosshair.position - _aimingPos.position);
         if (Physics.Raycast(ray, out var rayCasthit))
         {
-            Instantiate(_effectPref, rayCasthit.point, Quaternion.LookRotation(rayCasthit.normal));
+            var cast = Instantiate(_effectPref, rayCasthit.point, Quaternion.LookRotation(rayCasthit.normal));
             var targets = Physics.OverlapSphere(rayCasthit.point, _radius);
             foreach (var target in targets)
             {
@@ -65,7 +65,8 @@ public class HoldSkill : MonoBehaviour
                 }
 
             }
-            
+            Destroy(cast);
+
         }
 
     }
