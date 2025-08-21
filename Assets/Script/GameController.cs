@@ -20,11 +20,15 @@ public class GameController : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-        SoundManager.instance.PlayBGM(0);
+       
+    }
+    private void Start()
+    {
+        SoundManager.instance.PlayBGM(2);
     }
     private void Update()
     {
-        if (ratCount == 0)
+        if (ratCount <= 0)
         {
             gameWin();
         }

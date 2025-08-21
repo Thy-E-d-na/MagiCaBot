@@ -163,8 +163,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d51b0ff8b558e447a83883237382c5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _performPrefab: {fileID: 5112403345868107898, guid: 6f34ef0d986e9db4199cf75805f79753, type: 3}
+  spellTarget: {fileID: 0}
+  _chargeSpell: {fileID: 7177991128484655659, guid: 59a35ab9f68edff40b6e5332bed330f5, type: 3}
+  _reactiveMag: {fileID: 5112403345868107898, guid: 6f34ef0d986e9db4199cf75805f79753, type: 3}
   _burnR: 4
   _explosionForce: 5
   _damage: 15
-  _radius: 4
+  _radius: 2
+  _dmgCollider: {fileID: 0}

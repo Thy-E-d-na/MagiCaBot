@@ -4,7 +4,7 @@ public class SoundManager : MonoBehaviour
 {
     [SerializeField] private AudioSource _BGM;
     [SerializeField] private AudioSource _SFX;
-    [SerializeField] private AudioClip[] _clip;
+    [SerializeField] private AudioClip[] _sfx;
     [SerializeField] private AudioClip[] _bgm;
     public static SoundManager instance;
     private void Awake()
@@ -26,6 +26,13 @@ public class SoundManager : MonoBehaviour
             _BGM.clip = _bgm[inde]; //put tha CD in the Speaker
             _BGM.Play();
 
+        }
+    }
+    public void PlaySfx(int inde)
+    {
+        if (inde < _bgm.Length)
+        {
+            _SFX.PlayOneShot(_sfx[inde]);
         }
     }
     public void stopSound()

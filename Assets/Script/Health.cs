@@ -40,10 +40,11 @@ public class Health : MonoBehaviour
         {
             GameController.gameinstance.gameLose();
         }
-        if(CompareTag("Rat"))
+        if(CompareTag("Target"))
         {
-            Destroy(gameObject);
             GameController.gameinstance.ratDeath();
+            Destroy(gameObject);
+            
         }
         
     }

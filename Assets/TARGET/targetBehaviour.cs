@@ -5,14 +5,13 @@ public class targetBehaviour : MonoBehaviour
     public NavMeshAgent agent;
     public Transform cheese;
     public LayerMask wIsGround, wIsCheese;
-    public Animator _anim;
+    
     //patroling
     public Vector3 walkPoint;
     bool walkPointSet;
     public float walkPointRange;
     //atk
     public float timeBetweenEat;
-    bool ate;
     //states
     public float sightRange, atkRange;
     public bool cheeseInSight, cheeseIsEating;
@@ -55,7 +54,5 @@ public class targetBehaviour : MonoBehaviour
     {
         agent.SetDestination(cheese.position);
         transform.LookAt(cheese);
-        ate = true;
-        _anim.SetBool("isEating", ate);
     }
 }

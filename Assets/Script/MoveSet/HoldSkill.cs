@@ -2,22 +2,16 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
-public class HoldSkill : MonoBehaviour
+public class HoldSkill : SpellManager
 {
     //Electric skills
     [SerializeField] private InputActionReference _charge;
-    [SerializeField] private GameObject _skillVfx;
     [SerializeField] private Transform chargePos;
+
     GameObject mag;
- 
-    [SerializeField] private Transform _aimingPos;
-    //tam ngam tu man hinh
-    [SerializeField] private Transform _chargePos;
-    //noi cast phep tao skill
-    [SerializeField] private GameObject _effectPref;
-    [SerializeField] private int _damage;
-    [SerializeField] private float _radius;
-    [SerializeField] private Transform crosshair;
+    float t;
+
+    //public UnityEvent Oncast;
 
     public bool isCharging;
 
@@ -33,42 +27,40 @@ public class HoldSkill : MonoBehaviour
         _charge.action.canceled -= EndCharge;
         _charge.action.Disable();
     }
+    
     void StartCharge(InputAction.CallbackContext context)
     {
         isCharging = true;
-        mag = Instantiate(_skillVfx, chargePos.position, chargePos.rotation,chargePos);
-        crosshair.gameObject.SetActive(true);
+        mag = Instantiate(_chargeSpell,chargePos);
+        t = Time.time;
     }
     void EndCharge(InputAction.CallbackContext context)
     {
         isCharging = false;
-        Shocking();
-        crosshair.gameObject.SetActive(false);
+        if((Time.time - t) >= 2)
+        { 
+            Shocking();            
+        }
         Destroy(mag.gameObject);
-       
     }
-   
 
+    [Header("RayCastHit")]
+
+    [SerializeField] private Transform _aimingPos;
+    [SerializeField] private float _radius;
     public void Shocking()
     {
         
-        Ray ray = new(_aimingPos.position, crosshair.position - _aimingPos.position);
+        Ray ray = new(_aimingPos.position, chargePos.position - _aimingPos.position);
         if (Physics.Raycast(ray, out var rayCasthit))
         {
-            var cast = Instantiate(_effectPref, rayCasthit.point, Quaternion.LookRotation(rayCasthit.normal));
-            var targets = Physics.OverlapSphere(rayCasthit.point, _radius);
-            foreach (var target in targets)
-            {
-                if ((target.CompareTag("Target") || target.CompareTag("Chest")) && target.TryGetComponent<Health>(out var hp))
-                {
-                    hp.TakeDamage(_damage);
-                }
-
-            }
-            Destroy(cast);
-
+            SoundManager.instance.PlaySfx(_soundInde);
+            Instantiate(_reactiveMag, rayCasthit.point, Quaternion.LookRotation(rayCasthit.normal));
+            
         }
 
     }
+    //public void Casting() => Oncast.Invoke();
+
 
 }
